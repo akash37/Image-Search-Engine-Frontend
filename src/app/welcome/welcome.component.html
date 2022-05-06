@@ -1,0 +1,32 @@
+<h1>Welcome</h1>
+<!-- <div class="container">
+    Welcome {{name}}<br>
+    Welcome to our awesome website<br>
+    You can manage your todos <a routerLink="/todos">here</a>
+</div> -->
+
+<div class="container">
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Search an image</mat-label>
+        <input matInput #txtVal placeholder="Ex. Pizza" value="dog" (keydown.enter)="applyFilter(txtVal.value)">
+      </mat-form-field>
+    </form>
+</div>
+
+
+<table>
+  <tbody>
+    <tr *ngFor="let url of images['image_url']">
+      <div class="imagestyle" [style.background-image]="'url(' + url + ')'"></div>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <div *ngFor="let image of images" >
+  <div class="imagestyle">
+    <img src='{{image}}'/>
+  </div>
+  
+</div> -->
